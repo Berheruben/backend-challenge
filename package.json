@@ -1,0 +1,28 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Berheruben/backend-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Berheruben/backend-challenge/issues"
+  },
+  "homepage": "https://github.com/Berheruben/backend-challenge#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

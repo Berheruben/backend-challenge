@@ -26,7 +26,7 @@ I file package.json e package-lock.json contengono le varie librerie e dipendenz
 START SULLA MACCHINA LOCALE:
 
 Avendo precedentemente installato Node & npm, E' possibile scaricare la repo: 
-git clone https://github.com/Berheruben/backend-challenge.git
+git clone https://github.com/Berheruben/backend-challenge.git ||
 ../backend-challenge npm install
 ../backend-challenge npm start
 

@@ -38,7 +38,7 @@ app.get('/images/:name/resize', async (req, res) => {
     const fileBuffer = await fileService.resizeFile(name, width, height)
     return res.status(200).contentType('image/jpeg').send(fileBuffer)
   } catch (error) {
-    // TODO: map errors end status codes
+    
     res.status(500).send({ error: error.message })
   }
 })

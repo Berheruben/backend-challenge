@@ -1,36 +1,42 @@
-# backend-challenge
-(per mancanza di tempo + la mia scarsa conoscenza del argomento, non ho potuto sviluppare i test per i servizi)
+#backend-challenge
 
-STACK:
+### STACKS:
 
-ho utilizzato node.js insieme ad express.js, con aggiunta di diverse librerie/dipendenze:
-
--nodemon: usato per riavviare il server in automatico quando dovevo fare delle modifiche al codice.
--multer: usato per la gestione di dati multipart/form, che viene utilizzato principalmente per il caricamento di file.
--sharp: usato per ridimensionare un immagine.
-
-per testare le chiamate API ho utilizzato POSTMAN.
-
-STRUTTURA DEL PROGETTO:
-
-Il progetto è composto da una cartella chiamata "services", in cui all interno c'è un file javascript(file.js) usato per gestire i metodi CRUD.
-per formattare il codice, rendendolo più "pulito" ho utilizzato ESlint.
-c'è anche un file docker per poter avviare il programma senza scaricare il necessario per avviare il progetto
-I file package.json e package-lock.json contengono le varie librerie e dipendenze, e infine il server.js contiene i vari endpoints, necessari per poter:
-
--caricare un immagine(POST)
--monstrare tutte le immagini attraverso il loro nome(GET)
--eliminare un immagine(DELETE)
--ridimensionare un immagine passandogli come parametro la larghezza e la lunghezza.(GET)
-
-START SULLA MACCHINA LOCALE:
-
-Avendo precedentemente installato Node & npm, E' possibile scaricare la repo: 
-git clone https://github.com/Berheruben/backend-challenge.git ||
-../backend-challenge npm install
-../backend-challenge npm start
-
-una volta avviato il progetto, il programma vi creerà una cartella all interno del progetto chiamato "uploads" dove all interno, conterranno le immagini che avete inserito. 
+I used node.js together with express.js, with several libraries/dependencies added:
+- nodemon: used to restart the server automatically when I had to make changes to the code.
+- multer: used for handling multipart/form data, which is mostly used for file upload.
+- sharp: used to resize an image.
 
 
+### PROJECT STRUCTURE:
 
+The project consists of:
+- A folder called "services", in which there is a javascript file (file.js) used to manage access to the storage.
+- A Dockerfile.
+- The package.json and package-lock.json files contain the various libraries and dependencies, and finally the server.js contains the various endpoints, necessary to be able to:
+
+
+### HTTP APIs:
+
+POST: /images/
+- Upload an image.
+  
+GET: /images/
+- Show all images by their name.
+  
+DELETE: /images/:filename
+- Delete an image.
+  
+GET: /images/:filename/resize?width={width}&height={height}
+- Resize an image by passing it the width and length as parameters.
+
+### START ON LOCAL MACHINE:
+
+
+```
+docker builds . -t <name>/<nameImage>
+```
+
+```
+docker run -d -p 8080:8080 <name>/<nameImage>
+```
